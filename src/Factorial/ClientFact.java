@@ -15,10 +15,11 @@ public class ClientFact {
 
             OutputStream os=s.getOutputStream();
             PrintWriter pw= new PrintWriter(os,true);
-            int msg=6;
+            String msg="6";
             pw.println(msg);
-            msg=br.read();
-            System.out.println("The Factorial is = "+msg);
+            msg=br.readLine();
+            int f=Integer.parseInt(msg);
+            System.out.println("The Factorial is = "+f);
             s.close();
 
         }

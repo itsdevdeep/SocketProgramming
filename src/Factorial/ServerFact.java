@@ -20,12 +20,13 @@ public class ServerFact {
 
                 OutputStream os=s.getOutputStream();
                 PrintWriter pw= new PrintWriter(os,true);
-                int no=br.read();
+                String no=br.readLine();
                 int fact=1,i=0;
-                while(no>i)
+                int no1=Integer.parseInt(no);
+                while(no1>i)
                 {
-                    fact=fact*no;
-                    no--;
+                    fact=fact*no1;
+                    no1--;
                 }
                 pw.println(fact);
                 s.close();
